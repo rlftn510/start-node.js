@@ -1,5 +1,17 @@
-var fs = requeire("fs");
+var fs = require('fs');
 
-//readFIleSync
+/*
+//readFileSync
+console.log('A');
+var result = fs.readFileSync('syntax/sample.txt', 'utf8');
+console.log(result);
+console.log('C');
+*/
 
-var result = fs.readFileSync("syntax/sample.txt", "utf8");
+
+console.log('A');
+
+fs.readFile('syntax/sample.txt', 'utf8', function(err, result){
+    console.log(result);
+});
+console.log('C');
